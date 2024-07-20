@@ -1,7 +1,6 @@
 FROM node:20.15.1
 WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 CMD ["node","app.js"]
